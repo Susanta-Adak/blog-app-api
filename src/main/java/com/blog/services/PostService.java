@@ -2,7 +2,6 @@ package com.blog.services;
 
 import java.util.List;
 
-import com.blog.entities.Post;
 import com.blog.payloads.PostDto;
 import com.blog.payloads.PostResponse;
 
@@ -17,7 +16,7 @@ public interface PostService {
 	//get
 	PostDto getPostByid(Integer postId);
 	//get all
-	PostResponse getAllPost(Integer pageNumber, Integer pageSize);
+	PostResponse getAllPost(Integer pageNumber, Integer pageSize,String sortBy);
 	//get all post by user
 	List<PostDto> getAllPostByUser(Integer userid);
 	//get all post by category

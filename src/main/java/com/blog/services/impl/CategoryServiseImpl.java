@@ -1,7 +1,6 @@
 package com.blog.services.impl;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -13,8 +12,6 @@ import com.blog.exceptions.ResourceNotFoundException;
 import com.blog.payloads.CategoryDto;
 import com.blog.repositories.CategoryRepo;
 import com.blog.services.CategoryService;
-
-import net.bytebuddy.asm.Advice.This;
 
 @Service
 public class CategoryServiseImpl implements CategoryService {

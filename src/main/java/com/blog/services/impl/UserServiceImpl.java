@@ -1,7 +1,6 @@
 package com.blog.services.impl;
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -13,8 +12,6 @@ import com.blog.exceptions.ResourceNotFoundException;
 import com.blog.payloads.UserDto;
 import com.blog.repositories.UserRepo;
 import com.blog.services.UserService;
-
-import net.bytebuddy.asm.Advice.This;
 @Service
 public class UserServiceImpl implements UserService {
 	@Autowired
