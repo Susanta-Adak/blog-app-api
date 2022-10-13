@@ -34,4 +34,11 @@ public class GlobalExceptionHandler {
 		
 		return new ResponseEntity<Map<String,String>>(response,HttpStatus.BAD_REQUEST);
 	}
+	
+	@ExceptionHandler(AuthenticationException.class)
+	public ResponseEntity<ApiResponse> invalidPasswordException(AuthenticationException ex){
+		String message = ex.getMessage();
+		ApiResponse apiResponse = new ApiResponse(message,false);
+		return new ResponseEntity<ApiResponse>(apiResponse,HttpStatus.BAD_REQUEST);
+	}
 }
